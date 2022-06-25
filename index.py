@@ -1,8 +1,8 @@
-# amir.py app    
+# index.py app    
 
-                                                 # amir app backgrand
+                                                 
 
-print('Hello ! wellcome to Amir app please choose one of this :')                          # wellcome
+print('Hello ! welcome to Amir app please choose one of this :')                          
 
 print('circle code number :1 , recteangle code number:2 , squre code number:3 triangle code number:4')    # code numbers       
 
