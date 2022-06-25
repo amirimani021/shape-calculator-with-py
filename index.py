@@ -9,10 +9,7 @@ print('circle code number :1 , recteangle code number:2 , squre code number:3 tr
 code = input("enter your code :")                                 # code input
 
 code = int(code)                                  # code type
-
-if code > 4 or code < 1 :               # code if
-
-    print("code is false")      
+   
 
 if code < 2 and code > 0 :                      # circle if code
 
@@ -30,7 +27,7 @@ if code < 2 and code > 0 :                      # circle if code
     
     print('your circle perimeter is:' , circle_perimeter)    # print of output environment
 
-if code>1 and code<3 :                    # rectangle if code
+elif code>1 and code<3 :                    # rectangle if code
 
     width = input('please give me your width :')       # width input
 
@@ -56,7 +53,7 @@ if code>1 and code<3 :                    # rectangle if code
 
     print('your rectangle perimeter is:' , rectangle_perimeter)       #print output pf rectangle environment
 
-if code < 4 and code > 2 :   
+elif code < 4 and code > 2 :   
     
     squre_side = input('please give me your squre side :')
 
@@ -70,7 +67,7 @@ if code < 4 and code > 2 :
 
     print('your squre oerimeter is :' , squre_perimeter)
 
-if code < 6 and code > 3 :
+elif code < 6 and code > 3 :
 
     triangle_first_side = input("plese give me your first side :")
 
@@ -95,3 +92,7 @@ if code < 6 and code > 3 :
     print("your triangle area is :" , triangle_area)
 
     print("your triangle perimeter is :" , triangle_primeter)
+else :
+   print("code is false")   
+
+input("Press enter to exit ;)")
