@@ -1,108 +1,108 @@
-# index.py app
+import os
+# def color(): return os.system('color a')
 
 
-print('Hello ! welcome to Amir app please choose one of this :')
-
-# code numbers
-print('circle code number :1 , rectangle code number:2 , square code number:3 triangle code number:4')
-
-code = input("enter your code :")                                 # code input
-
-code = int(code)                                  # code type
+def clear(): return os.system('cls')
 
 
-#--------------------------Functions----------------------------------#
-def circle():
+def main():
+    os.system('color 02')
+    print(' Hello! Welcome to the Shape Calculator \n Please choose one of these codes:\n')
 
-    radius = input("please give me your radius :")               # radius input
+    # code numbers
+    print(' Circle code number: 1 \n Rectangle code number: 2 \n Square code number: 3 \n Triangle code number: 4\n')
 
-    radius = int(radius)                        # radius type
+    # code input
+    code = input(" Enter your code : ")
 
-    pi = 3.14                                # pi
+    try:
+        code = int(code)
+    except:
+        pass
 
-    circle_area = (radius**2)*pi           # circle area formula
+    # while not valid:  # loop until the user enters a valid int
+    #     try:
+    #         x = int(input('Enter an integer: '))
+    #         valid = True  # if this point is reached, x is a valid int
+    #     except ValueError:
+    #         print('Please only input digits')
 
-    circle_perimeter = (2*pi)*radius           # circle environment formula
+    #--------------------------Functions----------------------------------#
 
-    print("your circle area is :", circle_area)          # print of output area
+    def circle():
 
-    # print of output environment
-    print('your circle perimeter is:', circle_perimeter)
+        # radius input
+        radius = int(input(" Please give me your radius : "))
 
+        pi = 3.14                                # pi
 
-def rectangle():
+        circle_area = (radius**2)*pi           # circle area formula
 
-    width = input('please give me your width :')       # width input
+        circle_perimeter = (2*pi)*radius           # circle environment formula
 
-    width = int(width)                 # width type
+        # print of output area
+        print(" Your circle area is : ", circle_area)
 
-    # the length input
-    the_length = input('please give me your your length :')
+        # print of output environment
+        print(' Your circle perimeter is: ', circle_perimeter)
 
-    the_length = int(the_length)          # the length type
+    def rectangle():
 
-    rectangle_area = (width*the_length)        # rectangle area formula
+        width = int(input(' Please give me your width : '))       # width input
 
-    # rectangle environment formula
-    rectangle_perimeter = (width + the_length)*2
+        # the length input
+        the_length = input(' Please give me your your length : ')
 
-    if width > the_length:      # if code of width and the length rectangle
-        return print("this calculation is not possible")
+        the_length = int(the_length)          # the length type
 
-    else:
+        rectangle_area = (width*the_length)        # rectangle area formula
 
-        # print output of rectangle area
-        print("your rectangle area is:", rectangle_area)
+        # rectangle environment formula
+        rectangle_perimeter = (width + the_length)*2
 
-        # print output pf rectangle environment
-        print('your rectangle perimeter is:', rectangle_perimeter)
+        if width > the_length:      # if code of width and the length rectangle
+            return print(" This calculation is not possible")
 
+        else:
 
-def square():
+            # print output of rectangle area
+            print(" Your rectangle area is:", rectangle_area)
 
-    square_side = input('please give me your square side :')
+            # print output pf rectangle environment
+            print(' Your rectangle perimeter is:', rectangle_perimeter)
 
-    square_side = int(square_side)
+    def square():
 
-    square_perimeter = (4 * square_side)
+        square_side = int(input(' Please give me your square side : '))
 
-    square_area = (square_side * square_side)
+        square_perimeter = (4 * square_side)
 
-    print('your square area is :', square_area)
+        square_area = (square_side * square_side)
 
-    print('your square oerimeter is :', square_perimeter)
+        print(' Your square area is : ', square_area)
 
+        print(' Your square oerimeter is : ', square_perimeter)
 
-def triangle():
+    def triangle():
 
-    triangle_first_side = input("plese give me your first side :")
+        triangle_first_side = int(input(" Please give me your first side : "))
 
-    triangle_first_side = int(triangle_first_side)
+        triangle_second_side = int(
+            input(" Please give me your second side : "))
 
-    triangle_second_side = input("plese give me your second side :")
+        triangle_base = int(input(" Please give me your base : "))
 
-    triangle_second_side = int(triangle_second_side)
+        triangle_height = int(input(" Please give me your height : "))
 
-    triangle_base = input("plese give me your base :")
+        triangle_primeter = (triangle_first_side +
+                             triangle_second_side + triangle_base)
 
-    triangle_base = int(triangle_base)
+        triangle_area = (triangle_height * triangle_base) / 2
 
-    triangle_height = input("plese give me your height :")
+        print(" Your triangle area is : ", triangle_area)
 
-    triangle_height = int(triangle_height)
-
-    triangle_primeter = (triangle_first_side +
-                         triangle_second_side + triangle_base)
-
-    triangle_area = (triangle_height * triangle_base) / 2
-
-    print("your triangle area is :", triangle_area)
-
-    print("your triangle perimeter is :", triangle_primeter)
-#--------------------------End of functions----------------------------------#
-
-
-if type(code) is int:
+        print(" Your triangle perimeter is : ", triangle_primeter)
+    #--------------------------End of functions----------------------------------#
 
     if code == 1:                      # circle if code
         circle()
@@ -117,9 +117,17 @@ if type(code) is int:
         triangle()
 
     else:  # if non of above
-        print("code is false")
-else:
-    print("your code is invalid")
+        print(" Code is invalid!")
+
+    # to prevent the cmd from closing
+    nextUp = int(input("\n Enter 1 to return , press enter to exit: "))
+
+    if nextUp == 1:
+        clear()
+        main()
+
+    else:
+        exit()
 
 
-input("Press enter to exit ;)")  # to prevent the cmd from closing
+main()
