@@ -43,7 +43,7 @@ def rectangle():
 
     rectangle_area = (width*the_length)        # rectangle area formula
 
-    # recteangle environment formula
+    # rectangle environment formula
     rectangle_perimeter = (width + the_length)*2
 
     if width > the_length:                     # if code of width and the length rectangle
