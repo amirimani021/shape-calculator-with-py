@@ -12,20 +12,7 @@ code = int(code)                                  # code type
    
 
 if code < 2 and code > 0 :                      # circle if code
-
-    radius = input("please give me your radius :")               # radius input      
-
-    radius = int(radius)                        # radius type
-    
-    pi = 3.14                                # pi
-    
-    circle_area = (radius**2)*pi           # circle area formula
-    
-    circle_perimeter = (2*pi)*radius           # circle environment formula
-    
-    print("your circle area is :" , circle_area)          # print of output area
-    
-    print('your circle perimeter is:' , circle_perimeter)    # print of output environment
+  square()
 
 elif code>1 and code<3 :                    # rectangle if code
 
@@ -94,5 +81,25 @@ elif code < 6 and code > 3 :
     print("your triangle perimeter is :" , triangle_primeter)
 else :
    print("code is false")   
+
+
+def square():
+    radius = input("please give me your radius :")               # radius input      
+
+    radius = int(radius)                        # radius type
+    
+    pi = 3.14                                # pi
+    
+    circle_area = (radius**2)*pi           # circle area formula
+    
+    circle_perimeter = (2*pi)*radius           # circle environment formula
+    
+    print("your circle area is :" , circle_area)          # print of output area
+    
+    print('your circle perimeter is:' , circle_perimeter)    # print of output environment
+
+ 
+
+
 
 input("Press enter to exit ;)")
