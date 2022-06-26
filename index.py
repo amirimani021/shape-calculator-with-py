@@ -120,7 +120,12 @@ def main():
         print(" Code is invalid!")
 
     # to prevent the cmd from closing
-    nextUp = int(input("\n Enter 1 to return , press enter to exit: "))
+    nextUp = input("\n Enter 1 to return , press enter to exit: ")
+
+    try:
+        nextUp = int(nextUp)
+    except:
+        pass
 
     if nextUp == 1:
         clear()
