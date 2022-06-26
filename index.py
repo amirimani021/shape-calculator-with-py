@@ -117,7 +117,7 @@ elif code == 3:                   # square if code
     square()
 
 
-elif code == 4:  # triangle if code
+elif code == 4:                   # triangle if code
     triangle()
 
 
