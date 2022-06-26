@@ -20,13 +20,6 @@ def main():
     except:
         pass
 
-    # while not valid:  # loop until the user enters a valid int
-    #     try:
-    #         x = int(input('Enter an integer: '))
-    #         valid = True  # if this point is reached, x is a valid int
-    #     except ValueError:
-    #         print('Please only input digits')
-
     #--------------------------Functions----------------------------------#
 
     def circle():
