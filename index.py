@@ -102,24 +102,24 @@ def triangle():
 #--------------------------End of functions----------------------------------#
 
 
-if code == 1:                      # circle if code
-    circle()
+if type(code) is int:
 
+    if code == 1:                      # circle if code
+        circle()
 
-elif code == 2:                    # rectangle if code
-    rectangle()
+    elif code == 2:                    # rectangle if code
+        rectangle()
 
+    elif code == 3:                   # square if code
+        square()
 
-elif code == 3:                   # square if code
-    square()
+    elif code == 4:                   # triangle if code
+        triangle()
 
-
-elif code == 4:                   # triangle if code
-    triangle()
-
-
-else:  # if non of above
-    print("code is false")
+    else:  # if non of above
+        print("code is false")
+else:
+    print("your code is invalid")
 
 
 input("Press enter to exit ;)")  # to prevent the cmd from closing
