@@ -46,19 +46,16 @@ def rectangle():
     # rectangle environment formula
     rectangle_perimeter = (width + the_length)*2
 
-    if width > the_length:                     # if code of width and the length rectangle
+    if width > the_length:      # if code of width and the length rectangle
+        return print("this calculation is not possible")
 
-        rectangle_area = False             # false area
+    else:
 
-        rectangle_perimeter = False           # false environment
+        # print output of rectangle area
+        print("your rectangle area is:", rectangle_area)
 
-        print('is not true becuse width a more of the length')      # if print
-
-    # print output of rectangle area
-    print("your rectangle area is:", rectangle_area)
-
-    # print output pf rectangle environment
-    print('your rectangle perimeter is:', rectangle_perimeter)
+        # print output pf rectangle environment
+        print('your rectangle perimeter is:', rectangle_perimeter)
 
 
 def square():
