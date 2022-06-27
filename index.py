@@ -6,7 +6,7 @@ def clear(): return os.system('cls')
 
 
 def main():
-    os.system('color 02')
+    os.system('color f2')
     print(' Hello! Welcome to the Shape Calculator \n Please choose one of these codes:\n')
 
     # code numbers
